@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { postReducer, profileReducer } from './pages/state/app.reducer';
 import { appEffects } from './pages/state/app.effects';
 import { AppService } from './pages/state/app.service';
+import { AdminRoutingModule } from './pages/admin-login/admin.routing';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AppService } from './pages/state/app.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AdminRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,

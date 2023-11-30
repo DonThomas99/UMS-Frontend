@@ -63,6 +63,8 @@ userData$ = this.store.pipe(select(userProfile)).subscribe(userProfileData => {
       withCredentials:true
     }).subscribe({
       next:(res:any)=>{
+        console.log(res);
+        
       Emitters.authEmitter.emit(true);
       this.store.dispatch(retrieveprofile());
       Swal.fire('Success','Saved','success');

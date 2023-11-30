@@ -58,7 +58,10 @@ export class AdminLoginComponent implements OnInit {
       this.http.post('http://localhost:3000/admin/login',user,{
         withCredentials:true
       }).subscribe({
-        next:(res)=>this.router.navigate(['/admin/dashboard']),
+        next:(res)=>{
+          this.router.navigate(['/admin/dashboard']);
+          
+        },
      error: (err)=>{
         Swal.fire("Error",err.error.message,"error");
       }

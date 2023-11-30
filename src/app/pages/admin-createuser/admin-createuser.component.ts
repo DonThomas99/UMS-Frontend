@@ -44,7 +44,7 @@ export class AdminCreateuserComponent implements OnInit {
     }else if(!this.validateEmail(user.email)){
       Swal.fire("Error","Please enter a valid email","error");
     }else{
-      this.http.post('http://localhost:5000/api/admin/createuser',user,{
+      this.http.post('http://localhost:3000/admin/createuser',user,{
         withCredentials:true
       }).subscribe({
         next:()=>this.router.navigate(['/admin/userlist']),

@@ -17,12 +17,14 @@ export class AdminNavComponent implements OnInit {
     Emitters.authEmitter.subscribe((auth:boolean)=>{
       this.authenticated = auth;
     })
+    console.log(this.authenticated);
+    
   }
   logout(): void {
     this.http.post('http://localhost:3000/admin/logout',{},{
       withCredentials:true
-    }).subscribe(()=>{
+    }).subscribe(()=>
       this.authenticated=false
-    })
+    )
   }
 }
