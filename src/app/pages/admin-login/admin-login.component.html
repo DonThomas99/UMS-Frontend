@@ -1,0 +1,7 @@
+<app-admin-nav></app-admin-nav>
+<form [formGroup]="form" (submit)="submit()" class="form-signin">
+  <h1>Welcome Admin</h1>
+  <input type="email" formControlName="email" class="form-control" placeholder="email" required>
+  <input type="password" formControlName="password" class="form-control" placeholder="password" required>
+  <button class="w-100 btn btn-lg btn-primary">Sign In</button>
+</form>
